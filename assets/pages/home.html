@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/style.css">
+    <title>Shopsy</title>
+</head>
+<body class="home">
+    <h4 id="welcome">Shopsy</h4>
+    <button class=" btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#searchcanvas" id="search">Search</button>
+     <button class=" btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#list" id="cart">Cart</button>
+    <div class="offcanvas offcanvas-top" style="height: 600px;" id="searchcanvas">
+        <div class="offcanvas-header">
+            <h3>Search</h3><button class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <form class="input-group" onsubmit="searchfun(event)">
+                <input type="search" placeholder="search" class="form-control" id="input">
+                <input type="submit" class="btn-secondary">
+            </form>
+            <br>
+            <div class="row" id="searchdata">
+
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-top"style="height:700px" id="list">
+    <div class="offcanvas-header">
+        <h1 id="hcart">Cart</h1>
+        <button class="btn btn-close" data-bs-dismiss="offcanvas" id="dismiss"></button>
+      </div>
+       
+    <div class="offcanvas-body">
+        <table class="table">
+            <thead>
+            <tr class="trow">
+                <th>Product</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody id="tablebody">
+                
+            </tbody>
+        </table>
+    </div>
+    </div>
+    </div>
+    <h4>Our products</h4>
+    <div class="row g-3" id="homeproducts"></div>
+    <div id="cartmessage"></div>
+    <script src="/assets/script/index.js"></script>
+
+</body>
+</html>
